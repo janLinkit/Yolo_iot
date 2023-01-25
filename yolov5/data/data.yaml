@@ -1,0 +1,13 @@
+train: ../../datasets/train/images
+val: ../../datasets/valid/images
+test: ../../datasets/test/images
+
+nc: 3
+names: ['head', 'helmet', 'person']
+
+roboflow:
+  workspace: project
+  project: hard-hat-sample-gytfi
+  version: 1
+  license: Public Domain
+  url: https://app.roboflow.com/project/hard-hat-sample-gytfi/1
