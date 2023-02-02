@@ -79,7 +79,7 @@ def run(
         half=False,  # use FP16 half-precision inference
         dnn=False,  # use OpenCV DNN for ONNX inference
         vid_stride=1,  # video frame-rate stride
-        f = open('test.txt','w')
+        f = open('koordinaten.txt','w')
 ):
     source = str(source)
     save_img = not nosave and not source.endswith('.txt')  # save inference images
@@ -174,7 +174,7 @@ def run(
                         annotator.box_label(xyxy, label, color=colors(c, True))
                         f.write('\n')
                         f.write(f'X1: {int(xyxy[0].item())}, Y1: {int(xyxy[1].item())}, X2: {int(xyxy[2].item())}, Y2: {int(xyxy[3].item())}')
-                        
+
                     if save_crop:
                         save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
 
